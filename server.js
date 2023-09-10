@@ -22,9 +22,9 @@ app.get('/api', (req, res) => {
     // Format the UTC time as "yyyy-MM-ddTHH:mm:ssZ"
     const utcTime = `${year}-${month}-${day}T${hours}:${minutes}:${seconds}Z`;
   // Get GitHub URL of the file being run
-  const githubFileUrl = `https://github.com/ilong3/FirstRepo/blob/main/server.js`;
+  const githubFileUrl = `https://github.com/ilong3/HNGx_stage1/blob/main/server.js`;
   // Get GitHub URL of the full source code
-  const githubRepoUrl = 'https://github.com/ilong3/FirstRepo'
+  const githubRepoUrl = 'https://github.com/ilong3/HNGx_stage1'
     return res.status(200).json({
         slack_name :req.query.slack_name,
         current_day: currentDay,
@@ -35,7 +35,7 @@ app.get('/api', (req, res) => {
         status_code: 200
     })
 })
-PORT = 3001;
+PORT = 3000;
 app.listen(PORT, ()=>{
     console.log(`the server is running on port${PORT}`)
 });
